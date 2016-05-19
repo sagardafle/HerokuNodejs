@@ -10,7 +10,7 @@
 
   <body ng-app="sample" ng-controller="sController">
 
-<div class="container">
+  <div class="container">
   <h2>Form control: input</h2>
   <p>The form below contains two input elements; one of type text and one of type password:</p>
   <form role="form">
@@ -26,15 +26,14 @@
   </form>
 </div>
 
- <script>
+ <script type="text/javascript">
     		var app = angular.module('sample', []);
 			app.controller("sController", sController);
 
 			sController.$inject = [ '$scope', '$http', '$window' ];
-			function sController($scope, $http, $window) {
-				
+			function sController($scope, $http, $window) {				
 				$scope.save = function(){
-					alert("Saved values: (key:value)  = " + $scope.key + ":" = $scope.value);
+					alert("Saved values: (key:value)  = " + $scope.key + ": "  $scope.value);
 				};							
 			}		
     </script>
