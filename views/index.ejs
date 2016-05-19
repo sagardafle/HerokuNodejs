@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome Jagruti (Hi) to <%= title %></p>
+
+  <body ng-app="sample" ng-controller="sController">
+
+<div class="container">
+  <h2>Form control: input</h2>
+  <p>The form below contains two input elements; one of type text and one of type password:</p>
+  <form role="form">
+    <div class="form-group">
+      <label for="key">Key:</label>
+      <input type="text" class="form-control" id="key" ng-model="key">
+
+      <label for="value">Value:</label>
+      <input type="text" class="form-control" id="value" ng-model="value">
+
+      <button type="button" class="btn btn-default" ng-click="save()">Save</button>
+    </div>
+  </form>
+</div>
+
+ <script>
+    		var app = angular.module('sample', []);
+			app.controller("sController", sController);
+
+			sController.$inject = [ '$scope', '$http', '$window' ];
+			function sController($scope, $http, $window) {
+				
+				$scope.save = function(){
+				};							
+			}		
+    </script>
   </body>
 </html>
