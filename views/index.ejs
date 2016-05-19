@@ -7,7 +7,6 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-
   <body ng-app="sample" ng-controller="sController">
 
   <div class="container">
@@ -16,11 +15,12 @@
   <form role="form">
     <div class="form-group">
       <label for="key">Key:</label>
-      <input type="text" class="form-control" id="key" ng-model="key">
+      <input type="text" id="key" ng-model="key">
 
       <label for="value">Value:</label>
-      <input type="text" class="form-control" id="value" ng-model="value">
-
+      <input type="text" id="value" ng-model="value">
+      <br>
+      <br>
       <button type="button" class="btn btn-default" ng-click="save()">Save</button>
     </div>
   </form>
